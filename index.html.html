@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="no-select">
+    <!-- Heart balloons -->
+    <div class="heart-balloon" style="top: 5%; left: 5%; animation-delay: 0s; animation-duration: 25s;"><i class="fas fa-heart"></i></div>
+    <div class="heart-balloon" style="top: 10%; right: 8%; animation-delay: -5s; animation-duration: 22s;"><i class="fas fa-heart"></i></div>
+    <div class="heart-balloon" style="bottom: 15%; left: 10%; animation-delay: -10s; animation-duration: 28s;"><i class="fas fa-heart"></i></div>
+    <div class="heart-balloon" style="bottom: 10%; right: 5%; animation-delay: -15s; animation-duration: 24s;"><i class="fas fa-heart"></i></div>
+    <div class="heart-balloon" style="top: 40%; left: 3%; animation-delay: -7s; animation-duration: 30s;"><i class="fas fa-heart"></i></div>
+    <div class="heart-balloon" style="top: 30%; right: 3%; animation-delay: -12s; animation-duration: 26s;"><i class="fas fa-heart"></i></div>
+    
+    <div class="container">
+        <!-- Original content - hidden when YES is clicked -->
+        <h1 id="mainTitle"><i class="fas fa-heart heart"></i> Will You Be My Valentine Nuna? <i class="fas fa-heart heart"></i></h1>
+        
+        <div class="message" id="proposalMessage">
+            <p>Every day with you feels lot more meaningful. In a world full of noise, you’re my calm. </p>
+            <p>So today, I just want to ask from my heart…   
+                Will you be my Valentine Love? ❤️</p>
+        </div>
+        
+        <div class="buttons" id="actionButtons">
+            <button class="btn yes-btn" id="yesBtn">
+                YES <i class="fas fa-heart" style="margin-left: 8px;"></i>
+            </button>
+            <button class="btn no-btn" id="noBtn">
+                NO <i class="fas fa-times" style="margin-left: 8px;"></i>
+            </button>
+        </div>
+        
+        <!-- Confirmation Message - shown when YES is clicked -->
+        <div class="confirmation" id="confirmationMessage">
+            <h2><i class="fas fa-heart heart"></i> Great choice by the way 😌 <i class="fas fa-heart heart"></i></h2>
+            <p>You've made me the happiest person today! <i class="fas fa-heart heart"></i></p>
+            
+           
+            
+            <p>You will be my forever Valentine! ❤️</p>
+            <p>Love you always <i class="fas fa-heart heart"></i></p>
+            <div class ="cr7">
+            <img src="cr7suii.gif" alt="CR7 Image" />   
+            </div>
+            
+            
+            <div class="audio-instruction" id="audioInstruction">
+                <i class="fas fa-music"></i> Click anywhere on the page to play our special song! <i class="fas fa-music"></i>
+            </div>
+            
+            <div class="audio-playing" id="audioPlaying">
+                <i class="fas fa-check-circle"></i> Our song is now playing <i class="fas fa-heart"></i>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mobile-instruction">
+        Tap the hearts to pop them! <i class="fas fa-hand-point-up"></i>
+    </div>
+
+    <!-- Hidden Audio Element -->
+    <audio id="valentineAudio" preload="auto">
+        <source src="perfect.mp3" type="audio/mpeg">
+        <source src="perfect.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
