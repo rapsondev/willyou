@@ -142,7 +142,7 @@
             display: none; /* Initially hidden */
         }
         .cr7 img {
-            width: 400px;
+            width: 50%;
             height: auto;
             margin-top: 15px;
             border-radius: 15px;
@@ -367,3 +367,4 @@
                 display: block;
             }
         }
+
