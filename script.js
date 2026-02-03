@@ -1,5 +1,4 @@
-
-        // Mobile detection
+// Mobile detection
 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 // Get DOM elements
@@ -123,22 +122,36 @@ yesBtn.addEventListener('click', function() {
     handleYesClick();
 });
 
-// Remove the NO button click event handler completely
-// Only keep the movement on hover/touch
-
+// Make NO button move on hover (desktop) but NOT clickable
 noBtn.addEventListener('mouseover', moveNoButton);
+
+// Prevent NO button clicks on desktop
+noBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+});
 
 // Mobile touch events
 if (isMobile) {
+    // Make NO button move on touch start
     noBtn.addEventListener('touchstart', function(e) {
         e.preventDefault();
         moveNoButton();
     });
     
+    // Make YES button clickable
     yesBtn.addEventListener('touchend', function(e) {
         e.preventDefault();
         markUserInteraction();
         handleYesClick();
+    });
+    
+    // Prevent NO button from being clickable on mobile
+    noBtn.addEventListener('touchend', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
     });
     
     // Touch feedback for YES button only
@@ -149,9 +162,6 @@ if (isMobile) {
     yesBtn.addEventListener('touchend', function() {
         this.style.transform = 'translateY(0)';
     });
-    
-    // Make NO button unclickable on mobile
-    noBtn.style.pointerEvents = 'none';
 }
 
 // Audio control - click anywhere to play
